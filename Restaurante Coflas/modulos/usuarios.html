@@ -1,59 +1,97 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registro Cofla</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registro Cofla</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
 </head>
+
 <body>
-   <center>
+
+  <center>
+    <h1 class="title">Registro Cofla</h1>
+  </center>
+
+  <center>
     <div class="field">
-  <label class="label">Name</label>
-  <div class="control">
-    <input class="input" type="text" placeholder="e.g Alex Smith">
-  </div>
-</div>
-</center>
-
-<center>
-<div class="field">
-  <label class="label">Contraseña</label>
-  <div class="control">
-    <input class="input" type="email" placeholder="e.g. alexsmith@gmail.com">
-  </div>
+      <label class="label">Nombre</label>
+      <div class="control">
+        <input class="input is-info" type="text" placeholder="Ej: El May">
+      </div>
+    </div>
   </center>
 
   <center>
-<div class="field">
-  <label class="label">Genero</label>
-  <div class="control">
-    <input class="input" type="email" placeholder="e.g. alexsmith@gmail.com">
-  </div>
-  </center>
- 
-  <center>
-<div class="field">
-  <label class="label">Fecha de Nacimiento</label>
-  <div class="control">
-    <input class="input" type="email" placeholder="e.g. alexsmith@gmail.com">
-  </div>
+    <div class="field">
+      <label class="label">Contraseña</label>
+      <div class="control">
+        <input class="input is-info" type="password" placeholder="Tu clave secreta">
+      </div>
+    </div>
   </center>
 
   <center>
-<div class="field">
-  <label class="label">Telefono</label>
-  <div class="control">
-    <input class="input" type="email" placeholder="e.g. alexsmith@gmail.com">
-  </div>
+    <div class="field">
+      <label class="label">Género</label>
+      <div class="control">
+        <div class="select is-fullwidth">
+          <select>
+            <option>Masculino</option>
+            <option>Femenino</option>
+            <option>Otro</option>
+          </select>
+        </div>
+      </div>
+    </div>
   </center>
 
   <center>
-<div class="field">
-  <label class="label">Email</label>
-  <div class="control">
-    <input class="input" type="email" placeholder="e.g. alexsmith@gmail.com">
-  </div>
+    <div class="field">
+      <label class="label">Fecha de Nacimiento</label>
+      <div class="control">
+        <input class="input is-info" type="date">
+      </div>
+    </div>
   </center>
-</div>
+
+  <center>
+    <div class="field">
+      <label class="label">Teléfono</label>
+      <div class="control">
+        <input class="input is-info" type="tel" placeholder="Ej: 312515...">
+      </div>
+    </div>
+  </center>
+
+  <center>
+    <div class="field">
+      <label class="label">Email</label>
+      <div class="control">
+        <input class="input is-info" type="email" placeholder="dogorcofla@gmail.com">
+      </div>
+    </div>
+  </center>
+
+  <center>
+    <button class="button is-success is-large">Registrar
+      <a href=""></a>
+    </button>
+  </center>
+
+  <section class="section">
+    <div class="container">
+
+      <a href="../index.html" class="button is-link is-outlined">
+        <span class="icon">
+          <i class="fas fa-home"></i>
+        </span>
+        <span>Volver al Inicio</span>
+      </a>
+    </div>
+  </section>
+
 </body>
+
 </html>

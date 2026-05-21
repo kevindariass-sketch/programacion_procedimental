@@ -1,159 +1,147 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registro de Usuario - Bulma</title>
+    <title>Contabilidad</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <style>
-        .icono-perfil {
-            border: 2px solid #dbdbdb;
-            border-radius: 16px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 100%;
-            background-color: #f5f5f5;
-        }
-        /* Ajuste para que los inputs no tengan bordes excesivos si quieres que parezcan líneas */
-        .input-linea {
-            border-top: none;
-            border-left: none;
-            border-right: none;
-            border-radius: 0;
-            box-shadow: none;
-            border-bottom: 2px solid #eee;
-        }
-        .input-linea:focus {
-            box-shadow: none;
-            border-bottom-color: #3273dc;
-        }
-    </style>
+
 </head>
+
 <body>
 
-<section class="section">
-    <div class="container" style="max-width: 700px;">
-        
-        <h1 class="title has-text-centered">Gestión de Datos de Usuario</h1>
+    <section class="section">
+        <div class="container" style="max-width: 700px;">
 
-        <div class="field">
-            <label class="label">Seleccionar Perfil a Editar</label>
-            <div class="control has-icons-left">
-                <div class="select is-fullwidth is-primary">
-                    <select>
-                        <option>Usuario Actual: Juan Pérez</option>
-                        <option>Usuario Actual: María Gómez</option>
-                        <option>Crear nuevo perfil...</option>
-                    </select>
-                </div>
-                <div class="icon is-small is-left">
-                    <i class="fas fa-user-circle"></i>
+            <h1 class="title has-text-centered">Gestión de Contabilidad de Cofla</h1>
+
+            <div class="field">
+                <div class="control has-icons-left">
+                    <div class="select is-fullwidth is-primary">
+                        <select>
+                            <option>Cofla Actual: Kriño</option>
+                            <option>Cofla Actual: Topi</option>
+
+                        </select>
+                    </div>
+                    <div class="icon is-small is-left">
+                        <i class="fas fa-user-circle"></i>
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <br>
+            <br>
 
-        <div class="box">
-            <form>
-                <div class="media">
-                    <div class="media-left">
-                        <figure class="image is-128x128">
-                            <div class="icono-perfil has-text-grey-lighter">
-                                <i class="fas fa-camera fa-3x"></i>
-                            </div>
-                        </figure>
-                        <p class="help has-text-centered mt-2">Cambiar foto</p>
-                    </div>
-                    
-                    <div class="media-content">
-                        <div class="columns is-multiline">
-                            
-                            <div class="column is-6">
-                                <div class="field">
-                                    <label class="label is-small">Ventas</label>
-                                    <div class="control">
-                                        <input class="input is-small" type="text" placeholder="Ej: V-1024">
+            <div class="box">
+                <form>
+                    <div class="media">
+                        <div class="media-left">
+                            <figure class="image is-128x128">
+                                <div class="icono-perfil has-text-grey-lighter">
+                                    <i class="fas fa-camera fa-3x"></i>
+                                </div>
+                            </figure>
+                        </div>
+
+                        <div class="media-content">
+                            <div class="columns is-multiline">
+
+                                <div class="column is-6">
+                                    <div class="field">
+                                        <label class="label is-small">Ventas</label>
+                                        <div class="control">
+                                            <input class="input is-small" type="text" placeholder="Ej: ID-1234">
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
 
-                            <div class="column is-6">
-                                <div class="field">
-                                    <label class="label is-small">Fecha</label>
-                                    <div class="control">
-                                        <input class="input is-small" type="date">
+                                <div class="column is-6">
+                                    <div class="field">
+                                        <label class="label is-small">Fecha</label>
+                                        <div class="control">
+                                            <input class="input is-small" type="date">
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
 
-                            <div class="column is-6">
-                                <div class="field">
-                                    <label class="label is-small">Ingresos</label>
-                                    <div class="control has-icons-left">
-                                        <input class="input is-small is-success" type="number" placeholder="0.00">
-                                        <span class="icon is-small is-left">
-                                            <i class="fas fa-dollar-sign"></i>
-                                        </span>
+                                <div class="column is-6">
+                                    <div class="field">
+                                        <label class="label is-small">Ingresos</label>
+                                        <div class="control has-icons-left">
+                                            <input class="input is-small is-success" type="number" placeholder="0.00">
+                                            <span class="icon is-small is-left">
+                                                <i class="fas fa-dollar-sign"></i>
+                                            </span>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
 
-                            <div class="column is-6">
-                                <div class="field">
-                                    <label class="label is-small">Egresos</label>
-                                    <div class="control has-icons-left">
-                                        <input class="input is-small is-danger" type="number" placeholder="0.00">
-                                        <span class="icon is-small is-left">
-                                            <i class="fas fa-minus-circle"></i>
-                                        </span>
+                                <div class="column is-6">
+                                    <div class="field">
+                                        <label class="label is-small">Egresos</label>
+                                        <div class="control has-icons-left">
+                                            <input class="input is-small is-danger" type="number" placeholder="-0.00">
+                                            <span class="icon is-small is-left">
+                                                <i class="fas fa-minus-circle"></i>
+                                            </span>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
 
-                            <div class="column is-12">
-                                <div class="field">
-                                    <label class="label is-small">Conceptos</label>
-                                    <div class="control">
-                                        <input class="input is-small" type="text" placeholder="Descripción del movimiento...">
+                                <div class="column is-12">
+                                    <div class="field">
+                                        <label class="label is-small">Conceptos</label>
+                                        <div class="control">
+                                            <input class="input is-small" type="text"
+                                                placeholder="Descripción del movimiento...">
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
 
-                            <div class="column is-12">
-                                <div class="field">
-                                    <label class="label is-small">Valor Final</label>
-                                    <div class="control has-icons-left">
-                                        <input class="input is-small has-text-weight-bold" type="number" placeholder="Resultado final">
-                                        <span class="icon is-small is-left">
-                                            <i class="fas fa-calculator"></i>
-                                        </span>
+                                <div class="column is-12">
+                                    <div class="field">
+                                        <label class="label is-small">Valor Final</label>
+                                        <div class="control has-icons-left">
+                                            <input class="input is-small has-text-weight-bold" type="number"
+                                                placeholder="Resultado final">
+                                            <span class="icon is-small is-left">
+                                                <i class="fas fa-calculator"></i>
+                                            </span>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
 
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <div class="field is-grouped is-grouped-right mt-4">
-                    <div class="control">
-                        <button type="submit" class="button is-link">
-                            <span class="icon"><i class="fas fa-save"></i></span>
-                            <span>Guardar Datos</span>
-                        </button>
+                    <div class="field is-grouped is-grouped-right mt-4">
+                        <div class="control">
+                            <button type="submit" class="button is-link">
+                                <span class="icon"><i class="fas fa-save"></i></span>
+                                <span>Guardar tus Fucking Datos</span>
+                            </button>
+                        </div>
                     </div>
-                </div>
-            </form>
-        </div>
+                </form>
+            </div>
 
-    </div>
-</section>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <a href="../index.html" class="button is-link is-outlined">
+                <span class="icon">
+                    <i class="fas fa-home"></i>
+                </span>
+                <span>Volver al Inicio</span>
+            </a>
+        </div>
+    </section>
 
 </body>
-</html>
 
-\
+</html>
