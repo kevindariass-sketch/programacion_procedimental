@@ -1,97 +1,137 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Registro Cofla</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro Cofla</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- SweetAlert2 -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 
 <body>
 
-  <center>
-    <h1 class="title">Registro Cofla</h1>
-  </center>
+<section class="section">
+<div class="container">
+<div class="columns is-centered">
+<div class="column is-6-tablet is-5-desktop">
 
-  <center>
-    <div class="field">
-      <label class="label">Nombre</label>
-      <div class="control">
-        <input class="input is-info" type="text" placeholder="Ej: El May">
-      </div>
-    </div>
-  </center>
+<h1 class="title has-text-centered mb-5">Registro Cofla</h1>
 
-  <center>
-    <div class="field">
-      <label class="label">Contraseña</label>
-      <div class="control">
-        <input class="input is-info" type="password" placeholder="Tu clave secreta">
-      </div>
-    </div>
-  </center>
+<form>
 
-  <center>
-    <div class="field">
-      <label class="label">Género</label>
-      <div class="control">
-        <div class="select is-fullwidth">
-          <select>
-            <option>Masculino</option>
-            <option>Femenino</option>
-            <option>Otro</option>
-          </select>
-        </div>
-      </div>
-    </div>
-  </center>
+<div class="field">
+<label class="label">Nombre</label>
+<div class="control">
+<input class="input is-info" id="nombre_usuarios" type="text">
+</div>
+</div>
 
-  <center>
-    <div class="field">
-      <label class="label">Fecha de Nacimiento</label>
-      <div class="control">
-        <input class="input is-info" type="date">
-      </div>
-    </div>
-  </center>
+<div class="field">
+<label class="label">Apellido</label>
+<div class="control">
+<input class="input is-info" id="apellido" type="text">
+</div>
+</div>
 
-  <center>
-    <div class="field">
-      <label class="label">Teléfono</label>
-      <div class="control">
-        <input class="input is-info" type="tel" placeholder="Ej: 312515...">
-      </div>
-    </div>
-  </center>
+<div class="field">
+<label class="label">Tipo de Documento</label>
 
-  <center>
-    <div class="field">
-      <label class="label">Email</label>
-      <div class="control">
-        <input class="input is-info" type="email" placeholder="dogorcofla@gmail.com">
-      </div>
-    </div>
-  </center>
+<label class="radio">
+<input type="radio" name="tipo_documento" value="TI">
+TI
+</label>
 
-  <center>
-    <button class="button is-success is-large">Registrar
-      <a href=""></a>
-    </button>
-  </center>
+<label class="radio">
+<input type="radio" name="tipo_documento" value="CC">
+CC
+</label>
 
-  <section class="section">
-    <div class="container">
+</div>
 
-      <a href="../index.html" class="button is-link is-outlined">
-        <span class="icon">
-          <i class="fas fa-home"></i>
-        </span>
-        <span>Volver al Inicio</span>
-      </a>
-    </div>
-  </section>
+<div class="field">
+<label class="label">Número de Documento</label>
+<div class="control">
+<input class="input is-info" id="documento" type="text">
+</div>
+</div>
+
+<div class="field">
+<label class="label">Contraseña</label>
+<div class="control">
+<input class="input is-info" id="password" type="password">
+</div>
+</div>
+
+<div class="field">
+<label class="label">Género</label>
+
+<div class="select is-fullwidth">
+<select id="genero">
+<option value="">Seleccione</option>
+<option value="Masculino">Masculino</option>
+<option value="Femenino">Femenino</option>
+<option value="Otro">Otro</option>
+</select>
+
+</div>
+</div>
+
+<div class="field">
+<label class="label">Fecha de nacimiento</label>
+<div class="control">
+<input class="input is-info" id="fecha_nacimiento" type="date">
+</div>
+</div>
+
+<div class="field">
+<label class="label">Teléfono</label>
+<div class="control">
+<input class="input is-info" id="telefono_usuarios" type="text">
+</div>
+</div>
+
+<div class="field">
+<label class="label">Email</label>
+<div class="control">
+<input class="input is-info" id="email" type="email">
+</div>
+</div>
+
+<div class="field">
+<label class="label">Cargo</label>
+<div class="control">
+<input class="input is-info" id="cargo" type="text">
+</div>
+</div>
+
+<div class="field mt-5">
+<button type="button" id="btnGuardar" class="button is-success is-fullwidth">
+Registrar
+</button>
+</div>
+
+</form>
+
+<div class="has-text-centered mt-5">
+<a href="../index.html" id="btnInicio" class="button is-link is-outlined">
+<span class="icon">
+<i class="fas fa-home"></i>
+</span>
+<span>Volver al Inicio</span>
+</a>
+</div>
+
+</div>
+</div>
+</div>
+</section>
+
+<link rel="stylesheet" href="../css/sweetalert.css">
+<script src="../coflas.js/usuarios.js"></script>
 
 </body>
-
 </html>

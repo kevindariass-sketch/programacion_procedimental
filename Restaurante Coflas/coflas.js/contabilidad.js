@@ -1,57 +1,79 @@
-// ========== BOTÓN GUARDAR ==========
-const boton = document.querySelector("button[type='submit']");
+console.log("JavaScript cargado");
 
-boton.addEventListener("click", function(e) {
-    e.preventDefault();
 
-    // Capturar valores
-    let ventas = document.querySelector("input[placeholder='Ej: ID-1234']").value;
-    let fecha_contabilidad = document.querySelector("input[type='date']").value;
-    let ingresos = document.querySelector("input.is-success").value;
-    let egresos = document.querySelector("input.is-danger").value;
-    let concepto = document.querySelector("input[placeholder='Descripción del movimiento...']").value;
-    let valor = document.querySelector("input[placeholder='Resultado final']").value;
+function validarDatos(event) {
 
-    // Validación básica
-    if (!ventas || !fecha_contabilidad || !ingresos || !concepto) {
-        alert("⚠️ Por favor completa los campos obligatorios.");
+    // Evita que el formulario se envíe
+    event.preventDefault();
+
+    let ventas = document.getElementById("ventas").value.trim();
+    let fecha = document.getElementById("fecha_contabilidad").value;
+    let ingresos = document.getElementById("ingresos").value.trim();
+    let egresos = document.getElementById("egresos").value.trim();
+
+    // Campos vacíos
+    if (
+        ventas === "" ||
+        fecha === "" ||
+        ingresos === "" ||
+        egresos === ""
+    ) {
+
+        Swal.fire({
+            title: "Errooor!",
+            text: "Coflaa tienes que llenar todos los campos.",
+            imageUrl: "https://thumbs.dreamstime.com/b/el-doblar-masculino-flaco-joven-11673997.jpg",
+            imageWidth: 400,
+            imageHeight: 200,
+            imageAlt: "Custom image"
+        });
         return;
     }
 
-    // Mostrar en consola (para verificar)
-    console.log({
-        ventas,
-        fecha_contabilidad,
-        ingresos,
-        egresos,
-        concepto,
-        valor
+    // Ventas
+    if (!/^\d+$/.test(ventas)) {
+
+        Swal.fire({
+            title: "Error",
+            text: "Ventas solo puede contener números.",
+            icon: "error"
+        });
+
+        return;
+    }
+
+    // Ingresos
+    if (!/^\d+$/.test(ingresos)) {
+
+        Swal.fire({
+            title: "Error",
+            text: "Ingresos solo puede contener números.",
+            icon: "error"
+        });
+
+        return;
+    }
+
+    // Egresos
+    if (!/^\d+$/.test(egresos)) {
+
+        Swal.fire({
+            title: "Error",
+            text: "Egresos solo puede contener números.",
+            icon: "error"
+        });
+
+        return;
+    }
+
+    // Todo correcto
+    Swal.fire({
+        title: "Completadooo!",
+            text: "Coflaa tus fucking datos han sido enviados.",
+            imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSH6nzE1bS-2tIx4IZWiujryXWS7xBg8il2CVaJOWe2w&s=10",
+            imageWidth: 400,
+            imageHeight: 200,
+            imageAlt: "Custom image"
     });
 
-    alert("✅ Registro guardado con éxito");
-    location.reload();
-});
-
-
-// ========== BOTÓN VOLVER AL INICIO ==========
-const botonInicio = document.querySelector("a[href='../index.html']");
-
-botonInicio.addEventListener("click", function(e) {
-    e.preventDefault();
-    window.location.href = "../index.html";
-});
-
-
-// ========== CÁLCULO AUTOMÁTICO DEL VALOR FINAL ==========
-const inputIngresos = document.querySelector("input.is-success");
-const inputEgresos = document.querySelector("input.is-danger");
-const inputValor = document.querySelector("input[placeholder='Resultado final']");
-
-function calcularValorFinal() {
-    let ingresos = parseFloat(inputIngresos.value) || 0;
-    let egresos = parseFloat(inputEgresos.value) || 0;
-    inputValor.value = (ingresos - egresos).toFixed(2);
 }
-
-inputIngresos.addEventListener("input", calcularValorFinal);
-inputEgresos.addEventListener("input", calcularValorFinal);

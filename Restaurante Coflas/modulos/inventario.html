@@ -5,7 +5,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Inventario Coflaaaa!!!</title>
+
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
 <body>
@@ -15,76 +17,86 @@
 
       <div class="has-text-centered mb-6">
         <h1 class="title is-2 is-spaced">Inventario</h1>
-        <p class="subtitle is-4">Ingresa las características de tu producto</p>
+        <p class="subtitle is-4">
+          Ingresa las características de tu producto
+        </p>
       </div>
 
-      <div class="box box-container">
+      <div class="box">
 
-        <div class="field is-horizontal">
-          <div class="field-label is-normal">
-            <label class="label">Código de tu prooducto</label>
-          </div>
-          <div class="field-body">
-            <div class="field">
-              <p class="control">
-                <input class="input" type="number" placeholder="Ej: 123456">
-              </p>
+        <form id="formInventario" onsubmit="validarInventario(event)">
+
+          <div class="field is-horizontal">
+            <div class="field-label is-normal">
+              <label class="label">Código de tu producto</label>
             </div>
-          </div>
-        </div>
 
-        <div class="field is-horizontal">
-          <div class="field-label is-normal">
-            <label class="label">Nombre</label>
-          </div>
-          <div class="field-body">
-            <div class="field">
-              <p class="control">
-                <input class="input" type="text" placeholder="Ej: Antidogors ">
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div class="field is-horizontal">
-          <div class="field-label is-normal">
-            <label class="label">Cantidad de tu pedido</label>
-          </div>
-          <div class="field-body">
-            <div class="field">
-              <p class="control">
-                <input class="input" type="text" placeholder="Ej: 3 cofladoras medianas">
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div class="field is-horizontal">
-          <div class="field-label is-normal">
-            <label class="label">Marca</label>
-          </div>
-          <div class="field-body">
-            <div class="field">
-              <p class="control">
-                <input class="input" type="text" placeholder="Ej: Pastel Cofla!!!">
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div class="field is-horizontal mt-5">
-          <div class="field-label">
-          </div>
-          <div class="field-body">
-            <div class="field">
-              <div class="control">
-                <button id="btnEnviar" class="button is-primary is-fullwidth is-medium">
-                  <strong>Enviar tu Fucking pedido</strong>
-                </button>
+            <div class="field-body">
+              <div class="field">
+                <div class="control">
+                  <input id="codigo" class="input" type="number" placeholder="Ej: 123456">
+                </div>
               </div>
             </div>
           </div>
-        </div>
+
+          <div class="field is-horizontal">
+            <div class="field-label is-normal">
+              <label class="label">Nombre</label>
+            </div>
+
+            <div class="field-body">
+              <div class="field">
+                <div class="control">
+                  <input id="nombre_producto" class="input" type="text" placeholder="Ej: Antidogors">
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="field is-horizontal">
+            <div class="field-label is-normal">
+              <label class="label">Cantidad de tu pedido</label>
+            </div>
+
+            <div class="field-body">
+              <div class="field">
+                <div class="control">
+                  <input id="cantidad_inventario" class="input" type="text" placeholder="Ej: 3 cofladoras medianas">
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="field is-horizontal">
+            <div class="field-label is-normal">
+              <label class="label">Marca</label>
+            </div>
+
+            <div class="field-body">
+              <div class="field">
+                <div class="control">
+                  <input id="marca" class="input" type="text" placeholder="Ej: Pastel Cofla!!!">
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="field is-horizontal mt-5">
+            <div class="field-label"></div>
+
+            <div class="field-body">
+              <div class="field">
+                <div class="control">
+                  <button id="btnEnviar" class="button is-primary is-fullwidth is-medium" type="submit">
+                    <strong>Enviar tu Fucking pedido</strong>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </form>
 
       </div>
     </div>
@@ -92,14 +104,20 @@
 
   <section class="section">
     <div class="container">
-      <a href="../index.html" class="button is-link is-outlined">
+      <button id="btnInicio" class="button is-link is-outlined">
+
         <span class="icon">
           <i class="fas fa-home"></i>
         </span>
+
         <span>Volver al Inicio</span>
-      </a>
+
+      </button>
     </div>
   </section>
+
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="../coflas.js/inventario.js"></script>
 
 </body>
 
